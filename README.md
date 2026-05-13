@@ -16,7 +16,6 @@ Goals:
 Tools:
 - Sigma
 - Splunk
-- Elastic
 - Microsof Sentinel
 
 Autor:
