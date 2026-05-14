@@ -34,3 +34,5 @@ Autor:
 | PsExec Remote Execution | T1569.002 | Detects remote execution using PsExec |
 
 | Linux SSH Brute Force | T1110 | Detects failed SSH authentication attempts |
+
+| Suspicious Sudo Usage | T1548.003 | Detects suspicious sudo command execution |

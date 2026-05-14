@@ -1,0 +1,50 @@
+title: Suspicious Sudo Usage
+
+id: 66666666-7777-8888-9999-000000000000
+
+status: experimental
+
+description: Detects suspicious sudo command execution on Linux systems
+
+author: Teresa Ramirez
+
+date: 2026/05/13
+
+references:
+  - https://attack.mitre.org/techniques/T1548/003/
+
+logsource:
+  product: linux
+  service: auth
+
+detection:
+
+  selection:
+
+    message|contains:
+      - 'sudo'
+      - 'COMMAND='
+
+  suspicious_commands:
+
+    message|contains:
+      - 'useradd'
+      - 'chmod 777'
+      - 'wget'
+      - 'curl'
+      - '/bin/bash'
+      - 'nc '
+      - 'ncat'
+
+  condition: selection and suspicious_commands
+
+falsepositives:
+  - Legitimate system administration
+  - Authorized maintenance activity
+
+level: high
+
+tags:
+  - attack.privilege_escalation
+  - attack.t1548.003
+  - sudo
