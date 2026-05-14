@@ -27,5 +27,5 @@ Autor:
 |---|---|---|
 | PowerShell Encoded Commands | T1059.001 | Detects Base64 encoded PowerShell execution |
  
-
+| Mimikatz Activity | T1003 | Detects credential dumping activity |
 
