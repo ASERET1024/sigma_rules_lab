@@ -32,3 +32,5 @@ Autor:
 | Suspicious RDP Login | T1021.001 | Detects Remote Desktop logins |
 
 | PsExec Remote Execution | T1569.002 | Detects remote execution using PsExec |
+
+| Linux SSH Brute Force | T1110 | Detects failed SSH authentication attempts |

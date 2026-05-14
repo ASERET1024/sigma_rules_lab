@@ -1,0 +1,41 @@
+title: Linux SSH Brute Force Attempts
+
+id: 55555555-6666-7777-8888-999999999999
+
+status: experimental
+
+description: Detects multiple failed SSH authentication attempts
+
+author: Teresa Ramirez
+
+date: 2026/05/13
+
+references:
+  - https://attack.mitre.org/techniques/T1110/
+
+logsource:
+  product: linux
+  service: auth
+
+detection:
+
+  selection:
+
+    message|contains:
+      - 'Failed password'
+      - 'Invalid user'
+      - 'authentication failure'
+
+  condition: selection
+
+falsepositives:
+  - User typing wrong password
+  - Legitimate failed logins
+
+level: medium
+
+tags:
+  - attack.credential_access
+  - attack.t1110
+  - ssh
+  - brute_force
