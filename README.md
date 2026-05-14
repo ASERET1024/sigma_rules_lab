@@ -50,3 +50,5 @@ Autor:
 | AnyDesk Remote Access Detection | T1219 | Detects execution of AnyDesk remote access software |
 
 | TeamViewer Remote Access Detection | T1219 | Detects execution of TeamViewer remote access software |
+
+| Suspicious CMD Execution | T1059.003 | Detects suspicious Windows command shell activity |
