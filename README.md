@@ -44,3 +44,5 @@ Autor:
 | Registry Run Keys Persistence | T1547.001 | Detects persistence through Windows Run Keys |
 
 | Scheduled Task Persistence | T1053.005 | Detects suspicious scheduled task creation |
+
+| LSASS Memory Dump Detection | T1003.001 | Detects attempts to dump LSASS process memory |
