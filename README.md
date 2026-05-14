@@ -20,6 +20,12 @@ Tools:
 
 Autor:
  Teresa Ramirez
+
+ ## Detection Rules
+
+| Rule | MITRE ATT&CK | Description |
+|---|---|---|
+| PowerShell Encoded Commands | T1059.001 | Detects Base64 encoded PowerShell execution |
  
 
 
