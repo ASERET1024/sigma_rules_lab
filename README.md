@@ -52,3 +52,5 @@ Autor:
 | TeamViewer Remote Access Detection | T1219 | Detects execution of TeamViewer remote access software |
 
 | Suspicious CMD Execution | T1059.003 | Detects suspicious Windows command shell activity |
+
+| Suspicious WMIC Usage | T1047 | Detects suspicious WMIC command execution |
