@@ -35,4 +35,6 @@ Autor:
 
 | Linux SSH Brute Force | T1110 | Detects failed SSH authentication attempts |
 
-| Suspicious Sudo Usage | T1548.003 | Detects suspicious sudo command execution |
+| Suspicious Sudo Usage | T1548.003 | Detects suspicious sudo command execution |git 
+
+| Ransomware Shadow Copy Deletion | T1490 | Detects deletion of Windows Shadow Copies |
