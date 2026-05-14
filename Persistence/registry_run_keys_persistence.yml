@@ -1,0 +1,39 @@
+title: Registry Run Keys Persistence
+
+id: 99999999-0000-1111-2222-333333333333
+
+status: experimental
+
+description: Detects persistence using Windows Registry Run Keys
+
+author: Teresa Ramirez
+
+date: 2026/05/13
+
+references:
+  - https://attack.mitre.org/techniques/T1547/001/
+
+logsource:
+  product: windows
+  category: registry_set
+
+detection:
+
+  selection:
+
+    TargetObject|contains:
+      - '\Software\Microsoft\Windows\CurrentVersion\Run'
+      - '\Software\Microsoft\Windows\CurrentVersion\RunOnce'
+
+  condition: selection
+
+falsepositives:
+  - Legitimate software installation
+  - Authorized administrative changes
+
+level: high
+
+tags:
+  - attack.persistence
+  - attack.t1547.001
+  - registry

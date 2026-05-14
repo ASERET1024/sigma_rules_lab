@@ -40,3 +40,5 @@ Autor:
 | Ransomware Shadow Copy Deletion | T1490 | Detects deletion of Windows Shadow Copies |
 
 | Windows Defender Disabled | T1562.001 | Detects attempts to disable Microsoft Defender |
+
+| Registry Run Keys Persistence | T1547.001 | Detects persistence through Windows Run Keys |
