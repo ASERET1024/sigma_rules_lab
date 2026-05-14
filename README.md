@@ -38,3 +38,5 @@ Autor:
 | Suspicious Sudo Usage | T1548.003 | Detects suspicious sudo command execution |git 
 
 | Ransomware Shadow Copy Deletion | T1490 | Detects deletion of Windows Shadow Copies |
+
+| Windows Defender Disabled | T1562.001 | Detects attempts to disable Microsoft Defender |
