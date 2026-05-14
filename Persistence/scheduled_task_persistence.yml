@@ -1,0 +1,43 @@
+title: Scheduled Task Persistence
+
+id: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
+
+status: experimental
+
+description: Detects suspicious scheduled task creation for persistence
+
+author: Teresa Ramirez
+
+date: 2026/05/13
+
+references:
+  - https://attack.mitre.org/techniques/T1053/005/
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+
+  selection:
+
+    Image|endswith:
+      - '\schtasks.exe'
+
+    CommandLine|contains:
+      - '/create'
+      - '/sc'
+      - '/tn'
+
+  condition: selection
+
+falsepositives:
+  - Legitimate administrative tasks
+  - Software installation tasks
+
+level: high
+
+tags:
+  - attack.persistence
+  - attack.t1053.005
+  - scheduled_tasks
