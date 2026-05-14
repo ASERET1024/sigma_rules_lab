@@ -29,3 +29,4 @@ Autor:
  
 | Mimikatz Activity | T1003 | Detects credential dumping activity |
 
+| Suspicious RDP Login | T1021.001 | Detects Remote Desktop logins |

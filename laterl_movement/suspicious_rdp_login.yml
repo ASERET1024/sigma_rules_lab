@@ -1,0 +1,39 @@
+ title: Suspicious RDP Login
+
+ id: 33333333-4444-5555-6666-777777777777
+
+ status: experimental
+
+ description: Detects suspicious Remote Desktop Protocol logins
+
+ author: Teresa Ramirez
+
+ date: 2026/05/13
+
+ references:
+  - https://attack.mitre.org/techniques/T1021/001/
+
+ logsource:
+  product: windows
+  service: security
+
+ detection:
+
+  selection:
+
+    EventID: 4624
+    LogonType: 10
+
+  condition: selection
+
+ falsepositives:
+  - Legitimate remote administration
+  - Help desk activity
+
+ level: medium
+
+ tags:
+  - attack.lateral_movement
+  - attack.t1021.001
+  - rdp
+  
