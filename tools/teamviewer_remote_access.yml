@@ -1,0 +1,40 @@
+title: TeamViewer Remote Access Detection
+
+id: dddddddd-eeee-ffff-1111-222222222222
+
+status: experimental
+
+description: Detects execution of TeamViewer remote access software
+
+author: Teresa Ramirez
+
+date: 2026/05/13
+
+references:
+  - https://attack.mitre.org/techniques/T1219/
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+
+  selection:
+
+    Image|endswith:
+      - '\TeamViewer.exe'
+      - '\TeamViewer_Service.exe'
+
+  condition: selection
+
+falsepositives:
+  - Authorized IT support
+  - Remote administration
+
+level: medium
+
+tags:
+  - attack.command_and_control
+  - attack.t1219
+  - teamviewer
+  - remote_access

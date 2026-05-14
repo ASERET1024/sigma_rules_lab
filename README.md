@@ -48,3 +48,5 @@ Autor:
 | LSASS Memory Dump Detection | T1003.001 | Detects attempts to dump LSASS process memory |
 
 | AnyDesk Remote Access Detection | T1219 | Detects execution of AnyDesk remote access software |
+
+| TeamViewer Remote Access Detection | T1219 | Detects execution of TeamViewer remote access software |
