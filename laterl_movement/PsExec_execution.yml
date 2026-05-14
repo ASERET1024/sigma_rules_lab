@@ -1,0 +1,40 @@
+title: Suspicious PsExec Remote Execution
+
+id: 44444444-5555-6666-7777-888888888888
+
+status: experimental
+
+description: Detects possible PsExec remote execution activity
+
+author: Teresa Ramirez
+
+date: 2026/05/13
+
+references:
+  - https://attack.mitre.org/techniques/T1569/002/
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+
+  selection:
+
+    CommandLine|contains:
+      - 'psexec'
+      - 'PSEXESVC'
+      - '\\admin$'
+
+  condition: selection
+
+falsepositives:
+  - Legitimate administrative activity
+  - IT remote management
+
+level: high
+
+tags:
+  - attack.lateral_movement
+  - attack.t1569.002
+  - psexec
