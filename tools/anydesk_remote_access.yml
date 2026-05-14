@@ -1,0 +1,39 @@
+title: AnyDesk Remote Access Detection
+
+id: cccccccc-dddd-eeee-ffff-111111111111
+
+status: experimental
+
+description: Detects execution of AnyDesk remote access software
+
+author: Teresa Ramirez
+
+date: 2026/05/13
+
+references:
+  - https://attack.mitre.org/techniques/T1219/
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+
+  selection:
+
+    Image|endswith:
+      - '\AnyDesk.exe'
+
+  condition: selection
+
+falsepositives:
+  - Authorized remote support
+  - IT administration
+
+level: medium
+
+tags:
+  - attack.command_and_control
+  - attack.t1219
+  - anydesk
+  - remote_access

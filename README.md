@@ -46,3 +46,5 @@ Autor:
 | Scheduled Task Persistence | T1053.005 | Detects suspicious scheduled task creation |
 
 | LSASS Memory Dump Detection | T1003.001 | Detects attempts to dump LSASS process memory |
+
+| AnyDesk Remote Access Detection | T1219 | Detects execution of AnyDesk remote access software |
